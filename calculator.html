@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<body>
+    
+    <input type="number" id="avalue" placeholder="0">
+    <input type="number" id="bvalue" placeholder="0">
+
+    <select name="opration" id="opration">
+        <option value="">select</option>
+        <option value="add">+</option>
+        <option value="sub">-</option>
+        <option value="mul">*</option>
+        <option value="div">&#247;</option>
+    </select>
+    <button onclick="cal()">=</button>
+
+    <p id="demo"></p>
+
+    <script>
+
+
+        let c=0;
+
+        function cal(){
+            
+        let a_val = document.getElementById("avalue").value;
+        let b_val = document.getElementById("bvalue").value;
+
+        let option =document.getElementById("opration").value;
+            console.log(option)
+            a_val=Number(a_val);
+            b_val=Number(b_val);
+            // console.log(a_val);
+            // console.log(b_val);
+            // c=a_val+b_val;
+            // console.log(c);
+            // console.log(typeof(c))
+
+
+            switch(option){
+                case "add":
+                    c=a_val+b_val;
+                break;
+                case "sub":
+                    c=a_val-b_val;
+                break;
+                case "mul":
+                    c=a_val*b_val;
+                break;
+                case "div":
+                    c=a_val/b_val;
+                break;
+                default:
+                    alert("invalied number");
+ 
+            }
+            console.log(c)
+        }
+        console.log(c);
+    </script>
+</body>
+</html>
